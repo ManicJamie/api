@@ -135,12 +135,12 @@ namespace Modding
         }
 
         /// <summary>
-        ///     Controls when this mod should load compared to other mods.  Defaults to ordered by name.
+        ///     Controls when this mod should load compared to other mods - higher priority = earlier load. Mods with same load priority are loaded alphabetically. 
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Default 0.</returns>
         public virtual int LoadPriority()
         {
-            return 1;
+            return 0;
         }
 
         /// <summary>

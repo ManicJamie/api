@@ -269,7 +269,7 @@ namespace Modding
                 scenes.Add(Path.GetFileNameWithoutExtension(scenePath));
             }
 
-            IMod[] orderedMods = LoadedMods.OrderBy(x => x.LoadPriority()).ToArray();
+            IMod[] orderedMods = LoadedMods.OrderByDescending(x => x.LoadPriority()).ToArray();
 
             // dict<scene name, list<(mod, list<objectNames>)>
             Dictionary<string, List<(IMod, List<string>)>> toPreload =
